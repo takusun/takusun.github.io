@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  
+  <title>私とMisskey | たくすんのブログ</title>
+  <meta name="author" content="Takusun">
+  
+  <meta name="description" content="この記事はMisskey Advent Calendar 2020 12日目の記事です
+前日はhogehogeさんのfugafugaでした
+概要この記事では、わたくしTakusunがMisskeyを使い始めたこととMisskeyインスタンスを建てたことのきっかけ、その他もろもろを書いていこうと思いま">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="私とMisskey"/>
+  <meta property="og:site_name" content="たくすんのブログ"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">たくすんのブログ</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/null">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-私とMisskey" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2020-12-09T08:11:46.000Z"><a href="/2020/12/09/%E7%A7%81%E3%81%A8Misskey/">2020-12-09</a></time>
+      
+      
+  
+    <h1 class="p-name title" itemprop="headline name">私とMisskey</h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <p>この記事はMisskey Advent Calendar 2020 12日目の記事です</p>
+<p>前日はhogehogeさんのfugafugaでした</p>
+<h1 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h1><p>この記事では、わたくし<a target="_blank" rel="noopener" href="https://misskey.wine/@takusun">Takusun</a>がMisskeyを使い始めたこととMisskeyインスタンスを建てたことのきっかけ、その他もろもろを書いていこうと思います。</p>
+<h2 id="私がMisskeyを使い始めたきっかけ"><a href="#私がMisskeyを使い始めたきっかけ" class="headerlink" title="私がMisskeyを使い始めたきっかけ"></a>私がMisskeyを使い始めたきっかけ</h2><p>Misskeyには「引用リノート」という機能があります。</p>
+<p>これにより、ノート（Mastodonで言うトゥート）内に言及したいノートを含めることができます。</p>
+<p>［引用リノートのイメージ］</p>
+<p>見る側としては話の流れがある程度把握できます。</p>
+<p>私はこの機能を魅力的に思い、Misskeyを使い始めることにしました。</p>
+<h2 id="私がMisskeyインスタンスを建てたきっかけ"><a href="#私がMisskeyインスタンスを建てたきっかけ" class="headerlink" title="私がMisskeyインスタンスを建てたきっかけ"></a>私がMisskeyインスタンスを建てたきっかけ</h2><p>当初はmisskey.io（以下io鯖）を利用していました。</p>
+<p>特段io鯖に不満などはなかったのですが、Mastodonを自鯖で運用しているのでMisskeyも自分で管理したかった事、io鯖の負荷や規模が大きく運営者の負担になることを気にした事などが自鯖運用のきっかけです。</p>
+<p>（後々考えたら連合することで負荷が余計増えるのではないかという考えに至ってしまいましたが。）</p>
+<h3 id="Misskeyインスタンスを建てる作業"><a href="#Misskeyインスタンスを建てる作業" class="headerlink" title="Misskeyインスタンスを建てる作業"></a>Misskeyインスタンスを建てる作業</h3><p>当初はDolphin（Misskeyのフォーク。個人や少人数向け。）を利用しようと考えました。</p>
+<p>しかし、インストールの途中でどうしてもエラーが発生して建てることができませんでした。</p>
+<p><a target="_blank" rel="noopener" href="https://misskey.io/notes/88zrcyot8b">https://misskey.io/notes/88zrcyot8b</a></p>
+<p>DB関係のエラーなので、もしかしたらPostgreSQLのバージョンを落とせばインストールできたかもしれません。</p>
+<p>その時私はその解決策を思いつかなかった事、そうだとしてもPostgreSQLのバージョンを落とすというセキュリティリスクを気にして、Dolphinを諦めMisskeyを利用することにしました。</p>
+<p>Misskeyはあっさり起動しました。</p>
+<h3 id="サーバースペック"><a href="#サーバースペック" class="headerlink" title="サーバースペック"></a>サーバースペック</h3><p>VPSをレンタルし、メモリは2GB（ビルドが出来ないのでその時は一時的に引き上げる）、CPUは1、ストレージは50GB、メディア類はオブジェクトストレージに投げて合計月17ドル。オブジェクトストレージは要らなかったかもしれない。Cloudflareを挟んでいます。所在はシンガポールだけどそのことのレスポンスに不満はなし。</p>
+<h3 id="以下、Misskeyを建てて思ったこと"><a href="#以下、Misskeyを建てて思ったこと" class="headerlink" title="以下、Misskeyを建てて思ったこと"></a>以下、Misskeyを建てて思ったこと</h3><h4 id="リアクションが面白い"><a href="#リアクションが面白い" class="headerlink" title="リアクションが面白い"></a>リアクションが面白い</h4><p>Misskeyには「リアクション」という機能があります。</p>
+<p>ノートに対して、絵文字をくっつけることができる機能です。DiscordやMastodonのアナウンスメント欄にあるアレと同じです。</p>
+<p>［リアクションのイメージ］</p>
+<p>例えば、笑えると思ったノートに笑っている絵文字を付けたり、仕事がしんどいというノートにぴえんを付けたりできます。ふぁぼよりも多彩な感情表現ができ、コミュニケーションも活発になります。</p>
+<p>この「リアクション」はとても素晴らしい。</p>
+<p>リプライや引用リノートするほどでもないちょっとした「反応」をリアクションに乗せられます。</p>
+<h4 id="アップデートが楽"><a href="#アップデートが楽" class="headerlink" title="アップデートが楽"></a>アップデートが楽</h4><p>アップデートに手こずることを覚悟していたのですが、今の所公式のアップデート手順以外のことはしていません。びゅー？とやらがアップデートされたときもすんなりアップデートされたので、新人鯖缶にもやさしい。</p>
+<h3 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h3><p>Misskeyもユーザー、インスタンス共にいっぱい増えてほしい！</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">コメント</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://blog.takusun.website/2020/12/09/%E7%A7%81%E3%81%A8Misskey/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="検索">
+    <input type="hidden" name="as_sitesearch" value="blog.takusun.website">
+  </form>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2020 Takusun <a rel="me noopener" target="_blank" href="https://misskey.wine/@takusun">Misskey</a> <a rel="me noopener" target="_blank" href="https://ma.sns.onl/@takusun">Mastodon</a>
+  
+</div>
+<div class="clearfix"></div>
+</footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/js/gallery.js"></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script>
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
